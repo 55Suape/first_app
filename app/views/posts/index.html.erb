@@ -1,0 +1,12 @@
+<p>にゃははトップ</p>
+<%= link_to '新規投稿', '/posts/new', method: :GET %>
+<% @posts.each do |post| %>
+<div class="post">
+  <div class="post-date">
+    <%= post.content %> <%# RubyコードをHTMLに埋め込む %>
+  </div>
+  <div class="post-content">
+    <%= post.created_at %> <%# RubyコードをHTMLに埋め込む %>
+  </div>
+</div>
+<% end %>
